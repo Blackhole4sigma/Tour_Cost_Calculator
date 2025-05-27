@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Travel Booking Summary</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://wallpaperaccess.com/full/1575835.jpg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0; padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      color: #2c3e50;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #999;
+      padding: 14px;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    th {
+      background-color: #6c5ce7;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #e0e0ff;
+    }
+
+    td:last-child, th:last-child {
+      text-align: right;
+    }
+
+    .highlight {
+      font-weight: bold;
+      background-color: #dfe6ff;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #6c5ce7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Booking Summary</h2>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Cost (₹)</th>
+      </tr>
+      <tr>
+        <td>Airfare</td>
+        <td>{{ a }}</td>
+      </tr>
+      <tr>
+        <td>Hotel Cost</td>
+        <td>{{ h }}</td>
+      </tr>
+      <tr>
+        <td>Meal Cost</td>
+        <td>{{ me }}</td>
+      </tr>
+      <tr>
+        <td>Infant Cost</td>
+        <td>{{ mi }}</td>
+      </tr>
+      <tr>
+        <td>Service Fee</td>
+        <td>3000</td>
+      </tr>
+      <tr>
+        <td>Total (Before Tax)</td>
+        <td>{{ tc }}</td>
+      </tr>
+      <tr>
+        <td>ITC (5%)</td>
+        <td>{{ itc }}</td>
+      </tr>
+      <tr>
+        <td>GST (18%)</td>
+        <td>{{ gst }}</td>
+      </tr>
+      <tr class="highlight">
+        <td>Grand Total</td>
+        <td>{{ gtc }}</td>
+      </tr>
+    </table>
+    <a href="/">← Go Back to Booking</a>
+  </div>
+</body>
+</html>
