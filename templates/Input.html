@@ -1,4 +1,4 @@
-
+<!-- Input.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,36 +11,28 @@
       background-size: cover;
       margin: 0; padding: 0;
     }
-
     .container {
       width: 90%;
-      max-width: 500px;  /* Reduced width here */
+      max-width: 500px;
       margin: 50px auto;
-      background: rgba(255, 255, 255, 0.5); /* 50% transparent */
-      padding: 40px 30px;  /* Slightly adjusted padding */
+      background: rgba(255, 255, 255, 0.5);
+      padding: 40px 30px;
       border-radius: 12px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
-
     h2 {
       text-align: center;
       margin-bottom: 30px;
       color: #2c3e50;
     }
-
-    .g {
-      margin-bottom: 20px;
-    }
-
+    .g { margin-bottom: 20px; }
     label {
       display: block;
       margin-bottom: 6px;
       font-weight: 600;
       color: #2c3e50;
     }
-
-    input[type="number"],
-    select {
+    input[type="number"], select {
       width: 100%;
       padding: 10px;
       border: 1px solid #aaa;
@@ -49,7 +41,6 @@
       background-color: rgba(255, 255, 255, 0.85);
       box-sizing: border-box;
     }
-
     input[type="submit"] {
       background-color: #6c5ce7;
       color: white;
@@ -61,60 +52,59 @@
       width: 100%;
       transition: background-color 0.3s ease;
     }
-
     input[type="submit"]:hover {
       background-color: #5e50d4;
     }
   </style>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+  </script>
 </head>
 <body>
-  <div class="container">
-    <h2>Travel Booking Form</h2>
-    <form method="POST" action="/greet">
-      <div class="g">
-        <label for="ip">No. of infant(s) (0-5):</label>
-        <input type="number" id="ip" name="ip" min="0" required />
-      </div>
-
-      <div class="g">
-        <label for="cp">No. of child(ren) (6-12):</label>
-        <input type="number" id="cp" name="cp" min="0" required />
-      </div>
-
-      <div class="g">
-        <label for="tp">No. of teenager(s) (13-17):</label>
-        <input type="number" id="tp" name="tp" min="0" required />
-      </div>
-
-      <div class="g">
-        <label for="ap">No. of adult(s) (18+):</label>
-        <input type="number" id="ap" name="ap" min="1" required />
-      </div>
-
-      <div class="g">
-        <label for="wc">No. of wheelchair(s):</label>
-        <input type="number" id="wc" name="wc" min="0" required />
-      </div>
-      <div class="g">
-        <label for="2h">No. of double bed hotel room(s):</label>
-        <input type="number" id="2h" name="2h" min="0" />
-      </div>
-
-      <div class="g">
-        <label for="3h">No. of 2+1 hotel room(s):</label>
-        <input type="number" id="3h" name="3h" min="0" />
-      </div>
-
-      <div class="g">
-        <label for="dp">Dietary preference:</label>
-        <select id="dp" name="dp" required>
-          <option value="1">Non-Vegetarian</option>
-          <option value="0">Vegetarian</option>
-        </select>
-      </div>
-      <input type="submit" value="Submit Details" />
-    </form>
-  </div>
+<div id="google_translate_element" style="text-align: center; padding-top: 10px;"></div>
+<div class="container">
+  <h2>Travel Booking Form</h2>
+  <form method="POST" action="/greet">
+    <div class="g">
+      <label for="ip">No. of infant(s) (0-5):</label>
+      <input type="number" id="ip" name="ip" min="0" required />
+    </div>
+    <div class="g">
+      <label for="cp">No. of child(ren) (6-12):</label>
+      <input type="number" id="cp" name="cp" min="0" required />
+    </div>
+    <div class="g">
+      <label for="tp">No. of teenager(s) (13-17):</label>
+      <input type="number" id="tp" name="tp" min="0" required />
+    </div>
+    <div class="g">
+      <label for="ap">No. of adult(s) (18+):</label>
+      <input type="number" id="ap" name="ap" min="1" required />
+    </div>
+    <div class="g">
+      <label for="wc">No. of wheelchair(s):</label>
+      <input type="number" id="wc" name="wc" min="0" required />
+    </div>
+    <div class="g">
+      <label for="2h">No. of double bed hotel room(s):</label>
+      <input type="number" id="2h" name="2h" min="0" />
+    </div>
+    <div class="g">
+      <label for="3h">No. of 2+1 hotel room(s):</label>
+      <input type="number" id="3h" name="3h" min="0" />
+    </div>
+    <div class="g">
+      <label for="dp">Dietary preference:</label>
+      <select id="dp" name="dp" required>
+        <option value="1">Non-Vegetarian</option>
+        <option value="0">Vegetarian</option>
+      </select>
+    </div>
+    <input type="submit" value="Submit Details" />
+  </form>
+</div>
 </body>
 </html>
-
